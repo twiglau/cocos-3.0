@@ -14,4 +14,10 @@ MessageCenter  Mananger -> ComponentBase -> cc.component
 
 
 # 有限状态机  
-|
+|   -     |     主角     |    -     |
+|---------|-------------|-----------|
+| 站立     |    跑步     |    攻击    |   
+
+
+# 三个状态 - 需要一个父类  FSMState  
+# FSMManager 需要管理状态  
