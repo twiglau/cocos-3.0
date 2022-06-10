@@ -1,6 +1,6 @@
 {
   "__version__": "1.0.0",
-  "current-scene": "",
+  "current-scene": "8a8d3373-6d9b-4877-80d2-3dff20dcaa87",
   "gizmos-infos": {
     "is2D": false,
     "is3DIcon": false,
@@ -14,5 +14,18 @@
     ],
     "isIconGizmo3D": false,
     "iconGizmoSize": 2
+  },
+  "float-window": {
+    "position": {
+      "cc": {
+        "Camera": {
+          "dock": false,
+          "top": null,
+          "bottom": 10,
+          "left": null,
+          "right": 10
+        }
+      }
+    }
   }
 }
