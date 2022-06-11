@@ -31,6 +31,15 @@ export default class GameApp extends cc.Component {
     public EnterGameScene(): void {
         // 测试
         var msg = {uname: "blaker", upwd: "202CB962AC59075B964B07152D234B70"};
+
+        // var buf = ProtoMgr.Instance.SerializeMsg("UnameLoginReq", msg);
+        // console.log(buf);
+
+        // var msg2 = ProtoMgr.Instance.DeserializeMsg("UnameLogReq", buf);
+        // console.log(msg2);
+
+
+
         var stype = Stype.Auth;
         var ctype = Cmd.UnameLoginReq; // 
         NetEventMgr.Instance.sendMsg(stype, ctype, msg);
