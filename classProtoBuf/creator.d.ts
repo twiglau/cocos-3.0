@@ -32067,5 +32067,5 @@ declare const CC_RUNTIME: boolean;
 declare const CC_TEST: boolean;
 /** Running in the WeChat Mini Game. */
 declare const CC_WECHATGAME: boolean;
-
+/** 自定义些变量, 让编译器识别 */
 declare const protobuf: any;

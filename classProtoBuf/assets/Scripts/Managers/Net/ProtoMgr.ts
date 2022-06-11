@@ -1,12 +1,16 @@
 
 const {ccclass, property} = cc._decorator;
 
+/**
+ * 序列化 和 反序列化
+ */
 @ccclass
 export default class ProtoMgr extends cc.Component {
     public static Instance: ProtoMgr = null;
 
     private pb: any = null;
 
+    // 协议文本对象
     @property(cc.TextAsset)
     private pbTexAsset: cc.TextAsset = null;
 
@@ -19,6 +23,7 @@ export default class ProtoMgr extends cc.Component {
             return;
         }
 
+        // protobuf runtime库, 解析出相应的对象;
         this.pb = protobuf.parse(this.pbTexAsset);
         console.log(this.pb);
     }

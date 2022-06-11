@@ -32,7 +32,26 @@
 - TCP + 自定义封包拆包协议 + protobuf序列化工具; 
 - [WebSocket] + protobuf 系列化工具; Creator H5, android, iOS websocket => native实现; 服务器也要支持 Websocket;  
 
-# 
+# Creator 框架如何展开?  
+# Protobuf 的配置与导入到 Creator
+1. 协议定义工具;
+2. 序列化/反序列化 => 编码解码的库 => runtime;
+3. 还有一个工具: 编译工具 => 协议 => 目标语言的代码: C++, Java;
+4. JavaScript是不一样的 => 加载协议文件 => 解析协议文件 => 运行的时候我们来动态的生成出来;  
+5. 举例: 
+- 发送用户登录数据, 先 new GuestLoginReq 对象出来, 初始化数据;
+- 调用接口将 对象 => 序列化 => 二进制  
+6. 步骤:
+- 制定协议文件:game.proto;
+- 需要编码解码的 runtime库;作为插件,允许应用导入;
+7. 导入插件 runtime库后, protobuf 变量不识别,可以在 `creator.d.ts` 文件中定义变量: 
+```
+/** 自定义些变量, 让编译器识别 */
+declare const protobuf: any;
+
+```
+# WebSocket 的使用详解
+# 与服务器的命令对接过程详解
 
 
 
